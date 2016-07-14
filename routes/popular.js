@@ -3,7 +3,7 @@ var router = express.Router();
 var http = require('http');
 
 router.get('/', function(req, res, next) {
-	console.log(req);
+
   var options = {
   	method: 'GET',
   	host: 'fetd.prod.cps.awseuwest1.itvcloud.zone',
@@ -22,16 +22,12 @@ router.get('/', function(req, res, next) {
 
     response.on('end', function () {
     	var data = JSON.parse(reply);
-      res.render('programmes', {title: 'Most Popular programmes', data: data._embedded.productions});
+      res.render('popular', {title: 'Most Popular programmes', data: data._embedded.productions});
     });
   }
 
   http.request(options, callback).end();
 });
 
-router.post('/', function(req, res, next) {
-	console.log(res.body);
-	res.send('posting');
-});
-
 module.exports = router;
+

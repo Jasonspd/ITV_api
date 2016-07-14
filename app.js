@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var channel = require('./routes/channel');
 var categories = require('./routes/categories');
-var programmes = require('./routes/programmes');
+var latest = require('./routes/latest');
+var popular = require('./routes/popular');popular
 
 var app = express();
 
@@ -27,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/channel', channel);
 app.use('/categories', categories);
-app.use('/programmes', programmes);
+app.use('/latest_programmes', latest);
+app.use('/most_popular_programmes', popular);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

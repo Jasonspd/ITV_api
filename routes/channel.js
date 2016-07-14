@@ -21,7 +21,6 @@ router.get('/', function(req, res, next) {
 
     response.on('end', function () {
     	var data = JSON.parse(reply);
-    	// res.render('channel', {title: 'Channels', data: data});
     	res.send(data);
     });
   }

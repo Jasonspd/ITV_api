@@ -5,6 +5,7 @@ body {
 
 a {
   color: #00B7FF;
+  margin-right: 20px;
 }
 
 img.prod_images {
@@ -13,4 +14,8 @@ img.prod_images {
 
 .productions {
 	margin-bottom: 20px;
+}
+
+.intro {
+	margin-bottom: 50px;
 }
