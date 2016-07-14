@@ -1,6 +1,11 @@
 extends layout
 
 block content
-	a.btn.btn-default(href="./programmes") Most popular Programmes
-	a.btn.btn-default(href="./channel") Channels json data
-	a.btn.btn-default(href="./categories") Categories json data
+	.container
+		.page-header 
+			h1 ITV
+			a.json(href='./channel') Channels json data
+			a.json(href='./categories') Categories json data
+		.intro
+			a.btn.btn-default(href='./most_popular_programmes') What is everyone else watching?
+			a.btn.btn-default(href='./latest_programmes') What should I watch today?
