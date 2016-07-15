@@ -12,5 +12,5 @@ npm start
 TODO:
 - Testing
 - Channel and category selector
-- More information
+- More detail of the programmes
 - Styling!
