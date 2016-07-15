@@ -3,9 +3,11 @@ extends layout
 block content
 	.container
 		.page-header 
-			h1 ITV
-			a.json(href='./channel') Channels json data
-			a.json(href='./categories') Categories json data
 		.intro
 			a.btn.btn-default(href='./most_popular_programmes') What is everyone else watching?
 			a.btn.btn-default(href='./latest_programmes') What should I watch today?
+		.intro
+			if data
+				each c in data
+					prod.productions.col-lg-4.col-md-4.col-sm-6
+						img.prod_images(src='#{c._links.primaryImage.href}')

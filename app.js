@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var channel = require('./routes/channel');
 var categories = require('./routes/categories');
 var latest = require('./routes/latest');
-var popular = require('./routes/popular');popular
+var popular = require('./routes/popular');
 
 var app = express();
 

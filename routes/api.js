@@ -1,15 +1,13 @@
-var express = require('express');
-var router = express.Router();
 var http = require('http');
 
-router.get('/', function(req, res, next) {
-  
+var Api = function(title) {
+
   var options = {
   	method: 'GET',
   	host: 'fetd.prod.cps.awseuwest1.itvcloud.zone',
-  	path: '/platform/itvonline/samsung/channels?broadcaster=ITV',
+  	path: '/platform/itvonline/samsung/productions?grouping=latestPerProgramme&'+ title + '&broadcaster=itv',
   	headers: {
-  		'accept': 'application/vnd.itv.default.channel.v1+hal+json; charset=UTF-8'
+  		'accept': 'application/vnd.itv.default.production.v2+hal+json; charset=UTF-8'
   	}
   }
 
@@ -21,12 +19,14 @@ router.get('/', function(req, res, next) {
     });
 
     response.on('end', function () {
-    	var data = JSON.parse(reply);
-    	res.send(data);
+    	data = JSON.parse(reply);
     });
   }
 
   http.request(options, callback).end();
-});
 
-module.exports = router;
+}
+
+module.exports = Api;
+
+//TODO: One module to call api, insert title e.g. category=Children or channelId=itv

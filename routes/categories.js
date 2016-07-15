@@ -3,6 +3,7 @@ var router = express.Router();
 var http = require('http');
 
 router.get('/', function(req, res, next) {
+
   var options = {
   	method: 'GET',
   	host: 'fetd.prod.cps.awseuwest1.itvcloud.zone',
