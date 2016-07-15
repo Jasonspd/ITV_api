@@ -1,6 +1,6 @@
 #itv_api
 
-Simple application to discover ITV content
+Simple application to discover ITV content, using express and jade/pug.
 
 To run:
 ```
