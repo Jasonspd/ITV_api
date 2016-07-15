@@ -12,5 +12,5 @@ npm start
 TODO:
 - Testing
 - Channel and category selector
-- More detail of the programmes
+- One module to do all the api calls
 - Styling!
